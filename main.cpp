@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+    int a, com;
+    printf("°¡À§(1) ¹ÙÀ§(2) º¸(3) : ");
+    scanf("%d", &a);
+    com = (rand() % 3) + 1;
+
+    switch(a-com)
+    {
+    case 0:
+        printf("ºñ±è"); break;
+    case 1: case -2:
+        printf("»ç¶÷ ½Â");  break;
+    case 2: case -1:
+        printf("ÄÄÇ»ÅÍ ½Â"); break;
+    }
+
+    return 0;
+}
