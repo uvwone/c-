@@ -2,22 +2,25 @@
 #include <stdlib.h>
 
 using namespace std;
+char* msg[4] = {"","ê°€ìœ„","ë°”ìœ„","ë³´"};
 
 int main()
 {
     int a, com;
-    printf("°¡À§(1) ¹ÙÀ§(2) º¸(3) : ");
+    printf("ê°€ìœ„(1) ë°”ìœ„(2) ë³´(3) : ");
     scanf("%d", &a);
     com = (rand() % 3) + 1;
+
+    printf("ë‚˜: %s, ì»´: %s\n", msg[a], msg[com]);
 
     switch(a-com)
     {
     case 0:
-        printf("ºñ±è"); break;
+        printf("ë¹„ê¹€"); break;
     case 1: case -2:
-        printf("»ç¶÷ ½Â");  break;
+        printf("ì‚¬ëžŒ ìŠ¹");  break;
     case 2: case -1:
-        printf("ÄÄÇ»ÅÍ ½Â"); break;
+        printf("ì»´í“¨í„° ìŠ¹"); break;
     }
 
     return 0;
