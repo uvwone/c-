@@ -1,4 +1,4 @@
-#include <stdio.h> // Àç±Í
+#include <stdio.h> // Ã€Ã§Â±Ã
 
 using namespace std;
 
