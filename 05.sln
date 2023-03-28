@@ -16,7 +16,9 @@ int main()
     return 0;
 }
 //
-#include <stdio.h>
+#include <iostream>
+#include <math.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -24,12 +26,16 @@ int y[1000000], cnt=0;
 
 void yaksu(int n)
 {
-    int r = sqrt();
-    for (int i = 1; i <= n; i++) {
+    int r = sqrt(n);
+    for (int i = 1; i <= r; i++) {
         if (n % i == 0) {
-            printf("%d\n", i);
+            y[cnt++] = i;
+            y[cnt++] = n/i;
         }
     }
+
+    if(r*r == n) cnt--;
+    sort(y,y+cnt);
 }
 
 
@@ -37,9 +43,11 @@ void yaksu(int n)
 int main()
 {
     int n, i;
-    scanf("%d", &n);
+    cin >> n;
 
     yaksu(n);
+
+    for (int i = 0; i < cnt; i++) cout << y[i] << ' ';
     return 0;
 }
-//
+
