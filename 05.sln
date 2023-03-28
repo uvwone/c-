@@ -15,3 +15,31 @@ int main()
 
     return 0;
 }
+//
+#include <stdio.h>
+
+using namespace std;
+
+int y[1000000], cnt=0;
+
+void yaksu(int n)
+{
+    int r = sqrt();
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            printf("%d\n", i);
+        }
+    }
+}
+
+
+
+int main()
+{
+    int n, i;
+    scanf("%d", &n);
+
+    yaksu(n);
+    return 0;
+}
+//
