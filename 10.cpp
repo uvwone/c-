@@ -1,32 +1,19 @@
-#include <stdio.h>
+#include <iostream>
+#include <math.h>
 
 using namespace std;
 
 int main()
 {
-    int n;
-    scanf("%d", &n);
+    int n; cin >> n; int k = n-1;
+    for(int y = 0; y <= 2*k; y++)
+    {
+        for(int x = 0; x <= 2*k; x++)
+        {
+            if(x - k >= -y && x - k <= y && x >= y-k && x - 3*k <= -y) printf("*");
+            else printf(" ");
+        }
 
-    for (int i = 1; i <= n; i++){
-        for (int j = 1; j <= n - i; j++){
-            printf(" ");
-        }
-        for (int j = 1; j < i * 2; j++){
-            printf("*");
-        }
-        printf("\n");
+        cout << endl;
     }
-
-    //
-    for (int i = 1; i <= n; i++){
-        for (int j = 1; j <= i; j++){
-            printf(" ");
-        }
-        for (int j = 0; j <= 2 *(n - i - 1); j++){
-            printf("*");
-        }
-        printf("\n");
-    }
-    return 0;
 }
-
